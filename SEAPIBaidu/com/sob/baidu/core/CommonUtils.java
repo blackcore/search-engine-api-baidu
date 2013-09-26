@@ -16,41 +16,66 @@ import sob.baidu.exception.ApiException;
  * 
  */
 public class CommonUtils {
-	public static final String NAMESPACE = "https://api.baidu.com/json/sms/";
-	public static final String PACKAGE = "sob.baidu.";
+	private static final String NAMESPACE = "https://api.baidu.com/json/sms/";
+	private static final String PACKAGE = "sob.baidu.";
 	private static final String DOT = ".";
-	public static final String SLASH = "/";
+	private static final String SLASH = "/";
 	/**
 	 * 对应api v2版本
 	 */
-	public static final String V2 = "v2";
+	private static final String V2 = "v2";
 	/**
 	 * 对应api v3版本
 	 */
-	public static final String V3 = "v3";
+	private static final String V3 = "v3";
 	/**
 	 * 对应v2的方法
 	 */
-	public static List<String> METHODV2;
+	private static List<String> APIV2;
+	/**
+	 * 对应v3的方法
+	 */
+	private static List<String> APIV3;
 
 	public CommonUtils() {
 	}
 
 	static {
-		METHODV2 = new ArrayList<String>();
-		METHODV2.add("getKRFileState");
-		METHODV2.add("getKRByMultiSeedWord");
-		METHODV2.add("getKRFileIdbySeedWord");
-		METHODV2.add("getKRbySeedUrl");
-		METHODV2.add("getKRbySeedWord");
-		METHODV2.add("getSeedWord");
-		METHODV2.add("getKRQuota");
+		APIV2 = new ArrayList<String>();
+		initV2();
+		APIV3 = new ArrayList<String>();
+		initV3();
+	}
+
+	/**
+	 * 初始化v2版本的方法
+	 */
+	static void initV2() {
+		// KRService
+		APIV2.add(Constants.V2_API_KRService_getKRByMultiSeedWord);
+		APIV2.add(Constants.V2_API_KRService_getKRbySeedUrl);
+		APIV2.add(Constants.V2_API_KRService_getKRbySeedWord);
+		APIV2.add(Constants.V2_API_KRService_getKRCustom);
+		APIV2.add(Constants.V2_API_KRService_getKRFileIdbySeedWord);
+		APIV2.add(Constants.V2_API_KRService_getKRFilePath);
+		APIV2.add(Constants.V2_API_KRService_getKRFileState);
+		APIV2.add(Constants.V2_API_KRService_getKRQuota);
+		APIV2.add(Constants.V2_API_KRService_getSeedUrl);
+		APIV2.add(Constants.V2_API_KRService_getSeedWord);
+		// NewCreativeService
+		APIV2.add(Constants.V2_API_NewCreativeService_addSublink);
+		// FIXME api v2的方法集合
+
+	}
+
+	static void initV3() {
+		// FIXME api v3的方法集合
 	}
 
 	public static String getURL(String service, String method) throws ApiException {
 		StringBuilder url = new StringBuilder();
 		url.append(NAMESPACE);
-		if (METHODV2.contains(method)) {
+		if (APIV2.contains(method)) {
 			url.append(V2);
 		} else {
 			url.append(V3);
@@ -72,7 +97,7 @@ public class CommonUtils {
 	public static String getCls(String service, String method) {
 		StringBuilder cls = new StringBuilder();
 		cls.append(PACKAGE);
-		if (METHODV2.contains(method))
+		if (APIV2.contains(method))
 			cls.append(V2);
 		else
 			cls.append(V3);
