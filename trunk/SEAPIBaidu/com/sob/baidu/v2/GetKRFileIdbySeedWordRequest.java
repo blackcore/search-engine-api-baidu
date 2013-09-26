@@ -13,8 +13,8 @@ import java.util.List;
  * 
  */
 public class GetKRFileIdbySeedWordRequest {
-	public SeedFilter seedFilter;
-	public List seedWords;
+	private SeedFilter seedFilter;
+	private List<String> seedWords;
 
 	public GetKRFileIdbySeedWordRequest() {
 	}
@@ -27,11 +27,16 @@ public class GetKRFileIdbySeedWordRequest {
 		seedFilter = value;
 	}
 
-	public List getSeedWords() {
+	public List<String> getSeedWords() {
 		return seedWords;
 	}
 
-	public void setSeedWords(List value) {
+	/**
+	 * 请求的种子数
+	 * 
+	 * @param value
+	 */
+	public void setSeedWords(List<String> value) {
 		seedWords = value;
 	}
 }

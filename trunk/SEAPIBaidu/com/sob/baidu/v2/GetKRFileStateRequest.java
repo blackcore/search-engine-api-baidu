@@ -11,7 +11,7 @@ package sob.baidu.v2;
  * 
  */
 public class GetKRFileStateRequest {
-	public String krFileId;
+	private String krFileId;
 
 	public GetKRFileStateRequest() {
 	}

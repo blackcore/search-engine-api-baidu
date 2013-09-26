@@ -11,8 +11,8 @@ package sob.baidu.v2;
  * 
  */
 public class GetKRQuotaResponse {
-	public long remain;
-	public long total;
+	private long remain;
+	private long total;
 
 	public GetKRQuotaResponse() {
 	}

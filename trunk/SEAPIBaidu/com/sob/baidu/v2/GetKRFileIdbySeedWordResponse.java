@@ -11,11 +11,14 @@ package sob.baidu.v2;
  * 
  */
 public class GetKRFileIdbySeedWordResponse {
-	public String krFileId;
+	private String krFileId;
 
 	public GetKRFileIdbySeedWordResponse() {
 	}
 
+	/**
+	 * 关键词推荐处理任务id
+	 */
 	public String getKrFileId() {
 		return krFileId;
 	}

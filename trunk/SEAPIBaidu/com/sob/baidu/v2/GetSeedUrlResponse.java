@@ -13,16 +13,16 @@ import java.util.List;
  * 
  */
 public class GetSeedUrlResponse {
-	public List seedUrls;
+	private List<SeedUrl> seedUrls;
 
 	public GetSeedUrlResponse() {
 	}
 
-	public List getSeedUrls() {
+	public List<SeedUrl> getSeedUrls() {
 		return seedUrls;
 	}
 
-	public void setSeedUrls(List value) {
+	public void setSeedUrls(List<SeedUrl> value) {
 		seedUrls = value;
 	}
 }

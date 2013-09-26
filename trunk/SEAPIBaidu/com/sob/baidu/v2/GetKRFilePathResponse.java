@@ -11,7 +11,7 @@ package sob.baidu.v2;
  * 
  */
 public class GetKRFilePathResponse {
-	public String filePath;
+	private String filePath;
 
 	public GetKRFilePathResponse() {
 	}
