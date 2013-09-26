@@ -13,8 +13,8 @@ import java.util.List;
  * 
  */
 public class GetKRByMultiSeedWordRequest {
-	public SeedFilter seedFilter;
-	public List seedWords;
+	private SeedFilter seedFilter;
+	private List<String> seedWords;
 
 	public GetKRByMultiSeedWordRequest() {
 	}
@@ -27,11 +27,11 @@ public class GetKRByMultiSeedWordRequest {
 		seedFilter = value;
 	}
 
-	public List getSeedWords() {
+	public List<String> getSeedWords() {
 		return seedWords;
 	}
 
-	public void setSeedWords(List value) {
+	public void setSeedWords(List<String> value) {
 		seedWords = value;
 	}
 }

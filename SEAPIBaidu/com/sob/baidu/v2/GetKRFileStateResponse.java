@@ -11,7 +11,7 @@ package sob.baidu.v2;
  * 
  */
 public class GetKRFileStateResponse {
-	public int isGenerated;
+	private int isGenerated;
 
 	public GetKRFileStateResponse() {
 	}

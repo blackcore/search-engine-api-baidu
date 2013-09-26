@@ -13,16 +13,16 @@ import java.util.List;
  * 
  */
 public class GetSeedWordResponse {
-	public List seedWords;
+	private List<String> seedWords;
 
 	public GetSeedWordResponse() {
 	}
 
-	public List getSeedWords() {
+	public List<String> getSeedWords() {
 		return seedWords;
 	}
 
-	public void setSeedWords(List value) {
+	public void setSeedWords(List<String> value) {
 		seedWords = value;
 	}
 }

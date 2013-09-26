@@ -11,16 +11,16 @@ package sob.baidu.v2;
  * 
  */
 public class KRResult {
-	public Integer flag2;
-	public Integer flag1;
-	public String group;
-	public Long hotMonthPV;
-	public Integer hotMonth;
-	public int competition;
-	public Long broadPV;
-	public Long phrasePV;
-	public Long exactPV;
-	public String word;
+	private Integer flag2;
+	private Integer flag1;
+	private String group;
+	private Long hotMonthPV;
+	private Integer hotMonth;
+	private int competition;
+	private Long broadPV;
+	private Long phrasePV;
+	private Long exactPV;
+	private String word;
 
 	public KRResult() {
 	}

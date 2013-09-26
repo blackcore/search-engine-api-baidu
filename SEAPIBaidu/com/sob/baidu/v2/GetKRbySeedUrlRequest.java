@@ -11,8 +11,8 @@ package sob.baidu.v2;
  * 
  */
 public class GetKRbySeedUrlRequest {
-	public SeedFilter seedFilter;
-	public String url;
+	private SeedFilter seedFilter;
+	private String url;
 
 	public GetKRbySeedUrlRequest() {
 	}

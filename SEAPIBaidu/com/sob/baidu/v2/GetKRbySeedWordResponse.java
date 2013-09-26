@@ -13,7 +13,7 @@ import java.util.List;
  * 
  */
 public class GetKRbySeedWordResponse {
-	public List<KRResult> krResult;
+	private List<KRResult> krResult;
 
 	public GetKRbySeedWordResponse() {
 	}

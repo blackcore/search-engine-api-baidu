@@ -13,16 +13,16 @@ import java.util.List;
  * 
  */
 public class GetKRByMultiSeedWordResponse {
-	public List krResult;
+	private List<KRResult> krResult;
 
 	public GetKRByMultiSeedWordResponse() {
 	}
 
-	public List getKrResult() {
+	public List<KRResult> getKrResult() {
 		return krResult;
 	}
 
-	public void setKrResult(List value) {
+	public void setKrResult(List<KRResult> value) {
 		krResult = value;
 	}
 }

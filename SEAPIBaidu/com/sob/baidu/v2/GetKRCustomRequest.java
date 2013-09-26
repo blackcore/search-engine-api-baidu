@@ -11,9 +11,9 @@ package sob.baidu.v2;
  * 
  */
 public class GetKRCustomRequest {
-	public SeedFilter seedFilter;
-	public int type;
-	public Long id;
+	private SeedFilter seedFilter;
+	private int type;
+	private Long id;
 
 	public GetKRCustomRequest() {
 	}

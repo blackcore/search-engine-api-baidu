@@ -72,7 +72,7 @@ public class KRService {
 			List<KRResult> krResults = response.getKrResult();
 			if (krResults != null && krResults.size() > 0) {
 				for (KRResult item : krResults) {
-					System.out.println(new StringBuilder().append("word:").append(item.word).append("\tgroup:").append(item.group).append("\tcompetition:").append(item.competition));
+					System.out.println(new StringBuilder().append("word:").append(item.getWord()).append("\tgroup:").append(item.getGroup()).append("\tcompetition:").append(item.getCompetition()));
 				}
 			} else {
 				System.out.println("½á¹ûÎª¿Õ£¡");

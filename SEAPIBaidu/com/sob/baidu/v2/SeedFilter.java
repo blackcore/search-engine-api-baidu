@@ -13,28 +13,28 @@ import java.util.List;
  * 
  */
 public class SeedFilter {
-	public List duplicateUIds;
-	public Boolean removeDuplicate;
-	public Integer monthFilter;
-	public Boolean hotMonth;
-	public Integer maxNum;
-	public Boolean regionExtend;
-	public List searchRegion;
-	public Long competeHigh;
-	public Long competeLow;
-	public Long pvHigh;
-	public Long pvLow;
-	public List negativeWord;
-	public Integer matchType;
+	private List<Long> duplicateUIds;
+	private Boolean removeDuplicate;
+	private Integer monthFilter;
+	private Boolean hotMonth;
+	private Integer maxNum;
+	private Boolean regionExtend;
+	private List<Integer> searchRegion;
+	private Long competeHigh;
+	private Long competeLow;
+	private Long pvHigh;
+	private Long pvLow;
+	private List<String> negativeWord;
+	private Integer matchType;
 
 	public SeedFilter() {
 	}
 
-	public List getDuplicateUIds() {
+	public List<Long> getDuplicateUIds() {
 		return duplicateUIds;
 	}
 
-	public void setDuplicateUIds(List value) {
+	public void setDuplicateUIds(List<Long> value) {
 		duplicateUIds = value;
 	}
 
@@ -78,11 +78,11 @@ public class SeedFilter {
 		regionExtend = value;
 	}
 
-	public List getSearchRegion() {
+	public List<Integer> getSearchRegion() {
 		return searchRegion;
 	}
 
-	public void setSearchRegion(List value) {
+	public void setSearchRegion(List<Integer> value) {
 		searchRegion = value;
 	}
 
@@ -118,11 +118,11 @@ public class SeedFilter {
 		pvLow = value;
 	}
 
-	public List getNegativeWord() {
+	public List<String> getNegativeWord() {
 		return negativeWord;
 	}
 
-	public void setNegativeWord(List value) {
+	public void setNegativeWord(List<String> value) {
 		negativeWord = value;
 	}
 
