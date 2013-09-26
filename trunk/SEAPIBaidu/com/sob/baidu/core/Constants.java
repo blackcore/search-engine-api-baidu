@@ -11,18 +11,29 @@ package sob.baidu.core;
  * 
  */
 public class Constants {
+	/**************************************** KRService ****************************************/
 	/**
 	 * 推荐关键词
 	 */
 	public static final String V2_API_KRService = "KRService";
 	public static final String V2_API_KRService_getSeedWord = "getSeedWord";
-	/**
-	 * 根据输入的种子词返回推荐的扩展词，一次调用仅允许请求1 个种子词
-	 */
 	public static final String V2_API_KRService_getKRbySeedWord = "getKRbySeedWord";
-	/**
-	 * 异步接口，根据输入的种子词返回推荐的扩展词，一次调用允许请求100个种子词
-	 */
 	public static final String V2_API_KRService_getKRFileIdbySeedWord = "getKRFileIdbySeedWord";
+	public static final String V2_API_KRService_getKRFileState = "getKRFileState";
+	public static final String V2_API_KRService_getKRFilePath = "getKRFilePath";
+	public static final String V2_API_KRService_getKRbySeedUrl = "getKRbySeedUrl";
+	public static final String V2_API_KRService_getSeedUrl = "getSeedUrl";
+	public static final String V2_API_KRService_getKRQuota = "getKRQuota";
+	public static final String V2_API_KRService_getKRCustom = "getKRCustom";
+	public static final String V2_API_KRService_getKRByMultiSeedWord = "getKRByMultiSeedWord";
 
+	/**************************************** KRService ****************************************/
+
+	/**************************************** NewCreativeService ****************************************/
+	/**
+	 * NewCreativeService
+	 */
+	public static final String V2_API_NewCreativeService = "NewCreativeService";
+	public static final String V2_API_NewCreativeService_addSublink = "addSublink";
+	/**************************************** NewCreativeService ****************************************/
 }

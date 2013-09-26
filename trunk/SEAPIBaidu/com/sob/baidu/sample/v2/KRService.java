@@ -14,6 +14,7 @@ import sob.baidu.core.CommercialClient;
 import sob.baidu.core.JsonEnvelop;
 import sob.baidu.core.ResHeader;
 import sob.baidu.exception.ApiException;
+import sob.baidu.sample.ApiAuthor;
 import sob.baidu.v2.GetKRFileIdbySeedWordRequest;
 import sob.baidu.v2.GetKRFileIdbySeedWordResponse;
 import sob.baidu.v2.GetKRQuotaRequest;
@@ -30,9 +31,6 @@ import sob.baidu.v2.KRResult;
 public class KRService {
 
 	public static CommercialClient client;
-	private static String username = "345zibolan47";
-	private static String password = "Zbl58290217";
-	private static String token = "5a2a7eed125124bc4e37b84a72110188";
 
 	/**
 	 * @param args
@@ -45,7 +43,7 @@ public class KRService {
 
 	static void init(String apiMethod) {
 		try {
-			client = new CommercialClient(username, password, token, "", "KRService", apiMethod);
+			client = new CommercialClient(ApiAuthor.username, ApiAuthor.password, ApiAuthor.token, "", sob.baidu.core.Constants.V2_API_KRService, apiMethod);
 		} catch (ApiException e) {
 			System.out.println(e.getMessage());
 		}
@@ -110,7 +108,7 @@ public class KRService {
 	static void getKRQuota() {
 		try {
 			JsonEnvelop<ResHeader, GetKRQuotaResponse> env;
-			client = new CommercialClient(username, password, token, "", "KRService", "getKRQuota");
+			client = new CommercialClient(ApiAuthor.username, ApiAuthor.password, ApiAuthor.token, "", "KRService", "getKRQuota");
 
 			GetKRQuotaRequest request = new GetKRQuotaRequest();
 
